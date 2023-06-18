@@ -5,7 +5,6 @@ import com.example.demo.app.core.rest.dto.ResponseDTO;
 import com.example.demo.app.core.rest.entity.Exchange;
 import com.example.demo.app.core.rest.dto.ExchangeDTO;
 import com.example.demo.app.core.rest.service.HistoryService;
-import jakarta.websocket.server.PathParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

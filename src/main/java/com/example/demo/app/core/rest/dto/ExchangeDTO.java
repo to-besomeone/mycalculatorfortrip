@@ -2,7 +2,6 @@ package com.example.demo.app.core.rest.dto;
 
 
 import com.example.demo.app.core.rest.entity.Exchange;
-import jakarta.annotation.Nullable;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,7 +10,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ExchangeDTO {
-    @Nullable
     private String id;
 
     private String label;

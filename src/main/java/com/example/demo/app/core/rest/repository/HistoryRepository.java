@@ -1,7 +1,7 @@
 package com.example.demo.app.core.rest.repository;
 
 import com.example.demo.app.core.rest.entity.Exchange;
-import jakarta.transaction.Transactional;
+import javax.transaction.Transactional;
 import org.springframework.stereotype.Repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 

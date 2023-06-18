@@ -1,7 +1,7 @@
 package com.example.demo.app.core.rest.entity;
 
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
