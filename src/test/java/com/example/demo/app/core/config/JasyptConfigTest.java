@@ -32,7 +32,7 @@ class JasyptConfigTest {
     @Test
     void test_encrypt() {
         // given
-        String source = "calculatoradmin";
+        String source = "";
 
         // when
         String encrypted = encryptor.encrypt(source);
