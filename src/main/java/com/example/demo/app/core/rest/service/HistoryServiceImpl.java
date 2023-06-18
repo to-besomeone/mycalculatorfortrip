@@ -29,8 +29,8 @@ public class HistoryServiceImpl implements HistoryService {
             return saved;
         }
         catch (Exception e){
-            throw e;
-//            throw new RuntimeException("Error occurred during saving search history");
+//            throw e;
+            throw new RuntimeException("Error occurred during saving search history");
         }
     }
 
@@ -41,8 +41,8 @@ public class HistoryServiceImpl implements HistoryService {
             historyRepository.deleteExchangeByUserKeyAndId(userKey, id);
         }
         catch (Exception e){
-            throw e;
-//            throw new RuntimeException("Error occurred during deleting search history: " + id);
+//            throw e;
+            throw new RuntimeException("Error occurred during deleting search history: " + id);
         }
     }
 
