@@ -22,7 +22,7 @@ class JasyptConfigTest {
     @Test
     void check_env() {
         // when
-        String encryptionKey = System.getenv("");
+        String encryptionKey = System.getenv("enckey");
 
         // then
         assertThat(encryptionKey).isNotNull();
