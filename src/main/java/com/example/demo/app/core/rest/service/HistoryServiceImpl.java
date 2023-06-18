@@ -21,9 +21,7 @@ public class HistoryServiceImpl implements HistoryService {
     }
 
     public Exchange create(Exchange ex){
-        ex.setId("test");
-        validate(ex);
-        ex.setId(null);
+        validate(ex, "create");
         try{
             Exchange saved = historyRepository.save(ex);
             return saved;
@@ -35,7 +33,7 @@ public class HistoryServiceImpl implements HistoryService {
     }
 
     public void delete(String userKey, String id){
-        validate(userKey, id);
+        validate(userKey, id, "delete");
         try{
 
             historyRepository.deleteExchangeByUserKeyAndId(userKey, id);
@@ -46,7 +44,7 @@ public class HistoryServiceImpl implements HistoryService {
         }
     }
 
-    private void validate(Exchange ex) {
+    private void validate(Exchange ex, String type) {
         if (ex == null)
         {
             throw new RuntimeException("Entity Cannot be null");
@@ -55,12 +53,12 @@ public class HistoryServiceImpl implements HistoryService {
             throw new RuntimeException("Price cannot be empty");
         }
         else{
-            validate(ex.getUserKey(), ex.getId());
+            validate(ex.getUserKey(), ex.getId(), type);
         }
     }
 
-    private void validate(String userKey, String id){
-        if (id == null || "".equals(id))
+    private void validate(String userKey, String id, String type){
+        if (!type.equals("create") && (id == null || "".equals(id)))
             throw new RuntimeException("Id cannot be empty");
         if (userKey == null || "".equals(userKey))
             throw new RuntimeException("Unknown User");
